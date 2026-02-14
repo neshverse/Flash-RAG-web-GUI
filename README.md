@@ -1,37 +1,38 @@
-⚡ Flash Financial Analysis RAG
-https://img.shields.io/badge/%F0%9F%A4%97%2520Model-NeshVerse/Flash--financial--analysis--lfm--1.2b-blue
-https://img.shields.io/badge/License-Apache%25202.0-green.svg
-https://img.shields.io/badge/Python-3.10+-blue.svg
-https://img.shields.io/github/stars/neshverse/Flash-RAG-web-GUI?style=social
+# ⚡ Flash Financial Analysis RAG
 
-Lightning-fast, zero-hallucination financial analysis with strict RAG architecture. A production-ready web application built on Flash-Financial-Analysis-LFM-1.2B, featuring a modern dark-themed GUI and 100% verifiable answers.
+[![HuggingFace Model](https://img.shields.io/badge/🤗%20Model-NeshVerse/Flash--financial--analysis--lfm--1.2b-blue)](https://huggingface.co/NeshVerse/Flash-financial-analysis-lfm-1.2b)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
-📸 Preview
-https://docs/screenshot.png
+&gt; **Lightning-fast, zero-hallucination financial analysis with strict RAG architecture**
 
-✨ Features
-Feature	Description
-⚡ StrictRAG Engine	Zero-hallucination architecture with mandatory citations - every answer must come from your data
-🎨 Modern Dark UI	Beautiful glassmorphism interface with real-time stats and smooth animations
-📁 Multi-Format Upload	Drag-and-drop support for CSV, Excel, JSON files with instant preview
-✓ Source Verification	Every claim includes clickable source references to original data rows
-🎚️ Confidence Scoring	Visual indicators (High/Medium/Low/None) for answer reliability
-📊 Analytics Dashboard	Track query history, performance metrics, and most-used data sources
-🔒 100% Local	All processing happens on your machine - zero data leaves your computer
-🚀 Fast Inference	Optimized with Q4_K_M quantization for sub-second response times
-🚀 Quick Start
-Prerequisites
-Python 3.10 or higher
+A production-ready Retrieval-Augmented Generation (RAG) web application built on [Flash-Financial-Analysis-LFM-1.2B](https://huggingface.co/NeshVerse/Flash-financial-analysis-lfm-1.2b), featuring a modern dark-themed GUI and 100% verifiable answers.
 
-8GB+ RAM (16GB recommended for large datasets)
+![Flash RAG GUI](docs/screenshot.png)
 
-Flash-Financial-Analysis-LFM-1.2B-GGUF model
+## ✨ Features
 
-One-Line Installation (Linux/macOS)
-bash
-curl -sSL https://raw.githubusercontent.com/neshverse/Flash-RAG-web-GUI/main/install.sh | bash
-Manual Installation
-bash
+| Feature | Description |
+|---------|-------------|
+| **⚡ StrictRAG Engine** | Zero-hallucination architecture with mandatory citations |
+| **🎨 Modern Dark UI** | Beautiful glassmorphism interface with real-time stats |
+| **📁 Multi-Format Upload** | CSV, Excel, JSON with drag-and-drop |
+| **✓ Source Verification** | Every claim traced to original data |
+| **🎚️ Confidence Scoring** | High/Medium/Low/None risk indicators |
+| **📊 Analytics Dashboard** | Query history and performance metrics |
+| **🔒 100% Local** | No data leaves your machine |
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.10+
+- 8GB+ RAM
+- [Flash-Financial-Analysis-LFM-1.2B-GGUF](https://huggingface.co/NeshVerse/Flash-financial-analysis-lfm-1.2b) model
+
+### Installation
+
+```bash
 # Clone repository
 git clone https://github.com/neshverse/Flash-RAG-web-GUI.git
 cd Flash-RAG-web-GUI
@@ -39,41 +40,19 @@ cd Flash-RAG-web-GUI
 # Setup Python environment
 python -m venv venv
 
-# Activate virtual environment
-# Windows:
+# Windows
 venv\Scripts\activate
-# macOS/Linux:
+# macOS/Linux
 source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Create required directories
+# Create directories
 mkdir -p models uploads chroma_db
 
-# Download GGUF model to models/ folder
-# Choose your preferred quantization:
-# - Q4_K_M (1.1 GB) - Recommended balance
-# - Q5_K_M (1.2 GB) - Higher quality
-# - Q8_0 (1.4 GB) - Near lossless
-#
-# Download from: https://huggingface.co/NeshVerse/Flash-financial-analysis-lfm-1.2b
-Launch the Application
-bash
-python app.py
-Then open your browser to http://localhost:7860
-
-📊 Available Model Quantizations
-All GGUF files are available directly from my Hugging Face repository:
-
-File	Size	Type	Quality	Best For
-flash-financial-analysis-q2_k.gguf	0.6 GB	Q2_K	Minimum	4-6GB RAM devices
-flash-financial-analysis-q3_k_m.gguf	0.7 GB	Q3_K_M	Low-Medium	6GB RAM devices
-flash-financial-analysis-q4_k_m.gguf	0.9 GB	Q4_K_M	Good	⭐ RECOMMENDED
-flash-financial-analysis-q5_k_m.gguf	1.1 GB	Q5_K_M	High	8GB+ RAM devices
-flash-financial-analysis-q6_k.gguf	1.2 GB	Q6_K	Very High	12GB+ RAM devices
-flash-financial-analysis-q8_0.gguf	1.4 GB	Q8_0	Near Lossless	16GB+ RAM devices
-💡 Pro Tip: Start with Q4_K_M - it offers the best balance of speed, quality, and memory usage.
+# Download GGUF model to models/
+# From: https://huggingface.co/NeshVerse/Flash-financial-analysis-lfm-1.2b
 
 ### Run Application
 
