@@ -8,7 +8,8 @@
 
 A production-ready Retrieval-Augmented Generation (RAG) web application built on [Flash-Financial-Analysis-LFM-1.2B](https://huggingface.co/NeshVerse/Flash-financial-analysis-lfm-1.2b), featuring a modern dark-themed GUI and 100% verifiable answers.
 
-![Flash RAG GUI](docs/screenshot.png)
+![Flash RAG GUI]<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/c599805c-4d84-4cda-a5fd-b514efef4c57" />
+
 
 ## ✨ Features
 
